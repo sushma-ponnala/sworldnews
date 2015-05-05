@@ -1,0 +1,285 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+	outline:none;
+}
+ul, li {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+a img {
+	border:none;
+}
+body {
+	font-family: arial;
+	font-size:13px;
+	color:#000;
+	background:#fff;
+}
+a {
+	text-decoration:none;
+	color:#222;
+}
+.center {
+	text-align:center;
+}
+.categories a {
+	color:#0373C1;
+}
+
+.topnavigation {
+	background:#182b39 url(../images/top-bg.jpg) repeat-x left top;
+}
+.container {
+	margin:0 auto;
+	max-width:1000px;
+}
+.clearfix:after {
+	clear:both;
+	display:table;
+	content:"";
+	width:100%;
+}
+.tapnav {
+	list-style-type:none;
+}
+.tapnav li {
+	float:left;
+	margin-right:5px;
+}
+.tapnav li a {
+	float:left;
+	padding:10px;
+	text-align:inherit;
+	color:#fcfefd;
+	text-transform:uppercase;
+}
+.tapnav li a:hover {
+	color:#edf05b;
+}
+.logoheader {
+	padding:18px 0;
+}
+.logo {
+	float:left;
+	margin-top:6px;
+}
+.topad {
+	float:right;
+}
+.bannerdiv {
+	background:#000;
+	padding:25px 0 54px 0;
+}
+.vidediv {
+	border:3px solid #7c7c7c;
+	border-radius:3px;
+}
+.vidediv img {
+	display:block;
+	max-width:100%;
+}
+.belovideo {
+	margin-top:-31px;
+}
+.HomeContentArea {
+	background:#fff;
+	padding:10px;
+}
+.leftColumn {
+	float:left;
+	width:72%;
+}
+.widgetTitle {
+	background:#cacaca;
+	border-radius:3px;
+	overflow:hidden;
+}
+.widgetTitle span {
+	float:left;
+	background:#ae0002 url(../images/title-cuve.png) no-repeat right top;
+	padding:8px 25px 5px 10px;
+	font-size:16px;
+	text-transform:uppercase;
+	color:#fff;
+	font-weight:bold;
+	min-width:240px;
+	border-radius:3px 3px 0 0;
+}
+.widgetTitle a {
+	float:right;
+	text-decoration:none;
+	color:#ae0001;
+	font-size:13px;
+	margin:8px 10px 0 0
+}
+.widgetTitle a:hover {
+	text-decoration:underline;
+}
+.tipsrow {
+	padding:16px 0;
+}
+.tipimg {
+	float:left;
+	width:25%;
+	margin-top:5px;
+}
+.tipimg img {
+	display:block;
+	max-width:100%;
+	width: 100%;
+	max-height: 63px;
+}
+.pimage img{max-height: 180px;height: 180px;}
+.tipcontent {
+	padding-left:27%;
+	font-size:12px;
+	color:#757575;
+}
+.tipcontent a{ text-decoration: none; color: #757575;}
+.tipcontent p{ margin-top: 15px;}
+.tipcontent p:first-child{ margin: 0;}
+.tipcontent h3, .tipcontent a h3 {
+	font-size:24px;
+	color:#0a2f3f;
+	font-weight:normal;
+	padding-bottom:8px;
+}
+.sharesocial {
+	float:right;
+	margin-top:6px;
+	clear:both;
+}
+.sharesocial span {
+	float:left;
+	margin-right:5px;
+}
+.sharesocial a {
+	margin-right:3px;
+}
+.midad {
+	text-align:center;
+	margin:25px 0;
+}
+.midad img {
+	margin:0 auto;
+	max-width:100%;
+}
+.SectionTwo {
+	clear:both;
+	margin-top:25px;
+}
+.footer {
+	clear:both;
+	background:#8f0002;
+	text-align:center;
+	padding:10px 0;
+	color:#fff;
+	font-size:12px;
+	margin-top:25px;
+}
+.footnav {
+	list-style-type:none;
+	padding-bottom:5px;
+}
+.footnav li {
+	display:inline;
+	border-left:1px solid #fff;
+	padding:0 8px;
+	font-size:12px;
+}
+.footnav li a {
+	color:#fff;
+	text-decoration:none;
+}
+.footnav li:first-child {
+	border:none;
+}
+.sidebar {
+	float:right;
+	width:26%;
+}
+.rightad1 img {
+	width:100%;
+	max-width:100%;
+}
+.rightad2 {
+	text-align:center;
+}
+.RightwidgetTitle, .widgetTitle2 {
+	background:#ae0002;
+	padding:8px 25px 5px 10px;
+	font-size:16px;
+	text-transform:uppercase;
+	color:#fff;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.cal1 {
+	float:left;
+	width:49%;
+	font-size:11px;
+	margin-left:1%;
+}
+.cal1 img {
+	max-width:100%;
+	display: block;
+}
+.cal1 p {
+	min-height:50px;
+}
+.margin20_T {
+	margin-top:20px;
+}
+
+.LatestVideos{ float:left; width:48%;}
+.LvThumb{ float:left; width:35%; position:relative;}
+.videotext {
+position: absolute;
+left: 36%;
+top: 28%;
+background: url(../images/playicon.png) no-repeat left top;
+width: 37px;
+height: 37px;
+cursor: pointer;
+opacity:0.8;
+}
+.LvThumb img{ max-width:100%; display: block;}
+.LvThumb a{ display: block;}
+.LvContent{ padding-left:38%; font-size:11px; font-weight:bold; line-height:18px;}
+.LvContent span{ font-weight:normal;}
+.LvRow{ padding-bottom:10px;}
+.mlv{ text-align:right; color:#2f6192; font-weight:bold; font-size:16px;}
+.mlv a{color:#2f6192;}
+
+.SectionThree{ border-bottom:3px solid #ebebeb; padding-bottom:20px;}
+
+.ImageGallery{ float:right; width:48%;}
+.ImageGallery img{  max-width: 142px;}
+.LvRow a{margin-left:40px;}
+.LvRow a:first-child{ margin-left:0px;}
+
+.moretipsrow{
+	padding: 10px 0;
+	float: left;
+	width: 32%;
+	margin-left: 1%;
+	min-height: 90px;
+}
+.moretipsrow .tipimg{ margin-top: 0; width: 42%;position: relative;}
+.moretipsrow .tipimg img{border: 1px solid #999;}
+.moretipsrow .tipcontent{padding-left: 46%;}
+.moretipsrow h3, .moretipsrow a h3{ font-size: 13px;}
+.moretipdate{ text-align: right;}
+.moretipsrow .videotext,.pvclass .videotext,.LvThumb .videotext{ left: auto; top: auto;background-size: 20px; width: 20px; height: 20px; right: 0; bottom: 0;}
+
+.fashiontipsrow{ padding-top: 15px;}
+.fashiontipsrow .tipimg{width: 45%; margin: 0; margin-right: 20px;}
+.fashiontipsrow .tipimg img{ max-height: inherit;}
+.fashiontipsrow .tipcontent{ font-size: 13px; padding-left: 0;}
+.midclass{margin: 0;clear: both;padding: 25px 0;}
+.pvclass{position: relative;display: block;}

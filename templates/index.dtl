@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Style World News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type='text/javascript' src='/js/jquery-1.7.1.min.js'></script>
+<script src="/js/play_video.js"></script>
+<script type="text/javascript" src="http://jwpsrv.com/library/5V3tOP97EeK2SxIxOUCPzg.js"></script>
+<script type="text/javascript">jwplayer.key="L0SAYMTJJs/IIkeci5tG4vgIMGHAc6YFBtmJaA==";</script></script>
+<script>
+function epochToDate(epochSecs) { 
+    var m_names = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'); 
+    var d = new Date(new Date(0).setUTCSeconds(parseInt(epochSecs))); 
+    return (m_names[d.getMonth()]+ " " + d.getDate()+ " " + d.getFullYear()); 
+}
+</script>
+</head>
+
+<body>
+<div class="topnavigation">
+  <div class="container clearfix">
+    <ul class="tapnav">
+      <li><a href="/" title="Home">Home</a></li>
+      <li><a href="/morevideos" title="Latest Videos">Latest Videos</a></li>
+      <li><a href="/morepeople" title="People">People</a></li>
+      <li><a href="/morenews" title="Movie News">Movie News</a></li>
+      <li><a href="/moremusic" title="Music">Music</a></li>
+    </ul>
+  </div>
+</div>
+<!-- topnavigation end -->
+<div class="logoheader">
+  <div class="container clearfix"> <a href="/" class="logo" title="Style World News"><img src="images/logo.jpg" alt="" /></a>
+    <div class="topad"><img src="images/topad.jpg" alt="" /></div>
+  </div>
+</div>
+<!-- logoheader end -->
+<div class="bannerdiv">
+  <div class="container clearfix">
+    <div class="vidediv">
+      <input type="hidden" name="vide_val" id="video_val" value="{{videoParam.video}}">
+      <div id="trailor">Loading the player...</div> 
+    </div>
+  </div>
+</div>
+<!--bannerdiv end -->
+<div class="container clearfix belovideo">
+  <div class="HomeContentArea clearfix">
+    <div class="leftColumn">
+      <div class="clearfix SectionOne">
+        <h2 class="widgetTitle"> <span>People</span> <a href="/morepeople" title="View More +">View More +</a> </h2>
+
+        {% for n in latestnews %}
+        <div class="tipsrow clearfix">
+          <div class="tipimg pimage">
+            <a href="/news/{{ n.value._id }}" title="{{ n.value.title }}">
+              <img src="http://img1.contentapi.ws/{{ n.value.view_image }}" alt="" />
+            </a>
+          </div>
+          <div class="tipcontent">
+            <a href="/news/{{ n.value._id }}" title="{{ n.value.title }}">
+              <h3>{{ n.value.title }}</h3>
+              <div>{{n.value.news_body|slice:":450"}}</div>
+              <div class="sharesocial"> <script>document.write(epochToDate({{ n.value.uploaded_date }}))</script></div>
+              </div>
+            </a>
+        </div>
+        {% endfor %}
+        <!-- tipsrow end -->      
+        
+        <div class="midad"><img src="images/mid-ad.jpg" alt="" /></div>
+      </div>
+      <!-- SectionOne end -->
+      <div class="clearfix SectionTwo">
+        <h2 class="widgetTitle"> <span>Movie News</span> <a href="/morenews" title="View More +">View More +</a> </h2>
+        {% for n in latestbeautynews1 %}
+          <div class="tipsrow clearfix">
+            <div class="tipimg pimage">
+              <a href="/news/{{ n.value._id }}">
+                    <img src="http://img1.contentapi.ws/{{ n.value.view_image }}" alt="{{ n.value.title }}" title="{{ n.value.title }}"/>
+                </a>
+            </div>
+            <div class="tipcontent">
+              <a href="/news/{{ n._id }}">
+                <h3>{{n.value.title}}</h3>
+                {{n.value.news_body |slice:":450"}}
+                <div class="sharesocial">
+                  <script>document.write(epochToDate({{ n.value.uploaded_date }}))</script>
+                </div>
+              </a>
+            </div>            
+          </div>
+        {% endfor %}
+        <!-- tipsrow end -->        
+        
+        <div class="midad"><img src="images/mid-ad.jpg" alt="" /></div>
+      </div>
+      <!-- SectionTwo end -->
+      <div class="SectionThree clearfix">
+        <div class="LatestVideos">
+          <h2 class="widgetTitle2"> <span>Latest Videos</span></h2>
+          {% for n in latestVideos %}
+          <div class="LvRow clearfix">
+            <div class="LvThumb">
+              <a href="/playvideo/{{ n.id }}">
+                <img src="http://img1.contentapi.ws/{{ n.thumb_image }}" alt="" />
+                <span class="videotext"></span>
+              </a>
+            </div>
+            <div class="LvContent"> {{n.title}}<br>
+              <span>{{ n.upload_date }}</script></span>
+            </div>
+          </div>
+          {% endfor %}
+          <!-- LvRow end -->          
+          
+          <p class="mlv"><a href="/morevideos">More Latest Videos</a></p>
+        </div>
+        <!-- LatestVideos end --> 
+        <div class="ImageGallery">
+          <h2 class="widgetTitle2"> <span>Music</span></h2>
+          
+            <div class="LvRow clearfix">
+            {% for n in gallery %}
+            <a href="/news{{n.value.id}}"> <img src="http://img1.contentapi.ws/{{ n.value.thumb_image }}" alt="" /></a>
+            {% endfor %}
+            </div>        
+          
+          <!-- LvRow end --> 
+          
+          <p class="mlv"><a href="/moremusic">More Music</a></p>
+        </div>
+        <!-- LatestVideos end --> 
+      </div>
+      <!-- SectionThree end --> 
+    </div>
+    <!-- leftColumn end -->
+    <div class="sidebar">
+      <div class="rightad1"><img src="images/rightad1.jpg" alt="" /></div>
+      <div class="PopularVideos">
+        <h2 class="RightwidgetTitle"> <span>Popular Videos</span> </h2>
+        {% for n in latestPopularVideos %}
+          <div class="cal1"> 
+            <a href="/playvideo/{{ n.id }}" class="pvclass">
+              <img src="http://img1.contentapi.ws/{{ n.thumb_image }}" alt="" />
+              <span class="videotext"></span>
+            </a>
+            <p>{{n.title|slice:":50"}}</p>
+          </div>
+        {% endfor %}        
+      </div>
+      <!-- PopularVideos end -->
+      <div class="rightad2"><img src="images/rightad2.jpg" alt="" /></div>
+      <div class="rightad1 margin20_T"><img src="images/rightad1.jpg" alt="" /></div>
+    </div>
+    <!-- sidebar end --> 
+  </div>
+  <!-- HomeContentArea --></div>
+<div class="footer">
+  <ul class="footnav">
+    <li><a href="/" title="Home">Home</a></li>
+    <li><a href="/morevideos" title="Latest Videos">Latest Videos</a></li>
+    <li><a href="/morepeople" title="People">People</a></li>
+    <li><a href="/morenews" title="Movie News">Movie News</a></li>
+    <li><a href="/moremusic" title="Music">Music</a></li>
+    <li><a href="/termsandconditions" title="Tems & Conditions">Terms & Conditions</a></li>
+  </ul>
+  Copyright &copy;{% now "Y" %} styleworldnews. All Rights Reserved </div>  
+<!-- footer end -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+{application, sworldnews,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  goldrush,
+                  lager,
+                  cowboy,
+                  jsx,
+                  ibrowse,
+                  erlydtl
+                 ]},
+  {mod, { sworldnews_app, []}},
+  {env, []}
+ ]}.
